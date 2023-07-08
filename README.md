@@ -17,7 +17,7 @@ This project is built with Node.js + Express.
 1. Clone this repository.
 
 ``` 
-$ git clone https://github.com/candacechou/ShortenURL
+$ git clone https://github.com/candacechou/ShortenURL.git
 ```
 
 2. source into the directory
