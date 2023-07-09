@@ -42,7 +42,7 @@ app.get('/short', (req, res) => {
       let newkey = Math.random().toString(36).substring(3, 8)
       // check if new key already exists, if it does, generate new key 
       while (keymaps.has(newkey)) {
-        newkey = Math.random().toString(36).substring(3, 9)
+        newkey = Math.random().toString(36).substring(3, 8)
       }
       // add to map
       keymaps.set(newkey, userInput);
