@@ -26,29 +26,32 @@ $ git clone https://github.com/candacechou/ShortenURL.git
 $ cd URL_shortener
 ```
 
-3. Install npm 
-
-```
-URL_shortener/ $  npm install 
-```
-
-4. Install Express via npm
+3. Install Express via npm
 
 ```
 URL_shortener/ $  npm i express
 ```
-5. Install Express handler
+4. Install Express handler
 ```
 URL_shortener/ $ npm i express-handlebars
 ```
-6. raise the app.js via nodemon
+5. raise the app.js via nodemon
 
 ```
 URL_shortener/ $  npm run dev 
 ```
 
-7. to stop :
+6. to stop :
 
 ```
 URL_shortener/ $ CTRL+C
 ```
+
+## Tools
+
+- Node.js
+- CSS, HTML
+- Javascript
+- express.js
+- express-handlebars
+- Bootstraps
