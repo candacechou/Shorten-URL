@@ -24,31 +24,23 @@ app.get('/URL', (req, res) => {
 
 app.get('/short', (req, res) => {
   let userInput = req.query.importURL
-  // if userInput is empty, show error and return
-  if (userInput.toString().length === 0) {
-    // alert("Please enter valid URL!") 
-    // alert is not valid in node.js (backend, show alert in Frontend instead)
-    res.redirect('/URL')
+  // make a new id for this website:
+  // 1. firstly check if this URL has been saved before
+  savedURL = [...keymaps.values()]
+  if (savedURL.includes(userInput)) {
+    // if include, return the old one
+    shortenURL = base_URL + [...keymaps].find(([key, value]) => userInput === value)[0];
   }
   else {
-    // make a new id for this website:
-    // 1. firstly check if this URL has been saved before
-    savedURL = [...keymaps.values()]
-    if (savedURL.includes(userInput)) {
-      // if include, return the old one
-      shortenURL = base_URL + [...keymaps].find(([key, value]) => userInput === value)[0];
+    // generate a new key
+    let newkey = Math.random().toString(36).substring(3, 8)
+    // check if new key already exists, if it does, generate new key 
+    while (keymaps.has(newkey)) {
+      newkey = Math.random().toString(36).substring(3, 8)
     }
-    else {
-      // generate a new key
-      let newkey = Math.random().toString(36).substring(3, 8)
-      // check if new key already exists, if it does, generate new key 
-      while (keymaps.has(newkey)) {
-        newkey = Math.random().toString(36).substring(3, 8)
-      }
-      // add to map
-      keymaps.set(newkey, userInput);
-      shortenURL = base_URL + newkey;
-    }
+    // add to map
+    keymaps.set(newkey, userInput);
+    shortenURL = base_URL + newkey;
   }
   res.render('SuccessPage', { shortenURL })
 });
