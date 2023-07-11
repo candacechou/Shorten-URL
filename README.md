@@ -32,7 +32,6 @@ $ cd URL_shortener
 URL_shortener/ $  npm install
 ```
 
-```
 4. raise the app.js via nodemon
 
 ```
@@ -46,7 +45,6 @@ URL_shortener/ $ CTRL+C
 ```
 
 ## Tools
-
 - Node.js
 - CSS, HTML
 - Javascript
