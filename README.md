@@ -50,4 +50,4 @@ URL_shortener/ $ CTRL+C
 - Javascript
 - express.js
 - express-handlebars
-- Bootstraps
+- Bootstrap

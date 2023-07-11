@@ -24,12 +24,10 @@ app.get('/URL', (req, res) => {
 
 app.get('/short', (req, res) => {
   let userInput = req.query.importURL
-  console.log("userInput", userInput)
   // if userInput is empty, show error and return
   if (userInput.toString().length === 0) {
     // alert("Please enter valid URL!") 
     // alert is not valid in node.js (backend, show alert in Frontend instead)
-
     res.redirect('/URL')
   }
   else {
